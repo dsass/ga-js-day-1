@@ -6,40 +6,39 @@
 
     <script>
 
-      let goldWinner = {
-        name          : "Yuzuru Hanyu",
-        occupation    : "Figure Skater",
+      let grammyWinner = {
+        name          : "Supernatural",
+        Artist        : "Santana",
         age           : 23,
-        birthdate     : "December 7, 1994",
-        height        : 68,
-        recordsBroken : 12,
+        releaseDate   : "June 15, 1999",
+        grammyWins    : 9,
 
         // example of a key being the name of a function
         // and the value being the function definition
         updateRecords : function(amt) {
           // What is 'this'?
-          this.recordsBroken += amt;
+          this.grammyWins += amt;
         }
       };
-      
-      console.log("current recordsBroken: " + goldWinner.recordsBroken);
 
-      goldWinner.updateRecords(3);
+      console.log("current grammyWins: " + grammyWinner.grammyWins);
 
-      console.log("updated recordsBroken: " + goldWinner.recordsBroken);
+      grammyWinner.updateRecords(3);
+
+      console.log("updated grammyWins: " + grammyWinner.grammyWins);
 
       // -----------------------------------
       // logging objects to the console
 
       // If you try this in the console you'll notice it won't work as
-      // expected, you'll get goldWinner: [object Object]
-      console.log('goldWinner: ' + goldWinner);
+      // expected, you'll get grammyWinner: [object Object]
+      console.log('grammyWinner: ' + grammyWinner);
 
       // You can use JSON.Stringify() to print the contents as a string
-      console.log(JSON.stringify(goldWinner));
+      console.log(JSON.stringify(grammyWinner));
 
       // Or you can use this to get an expandable object in the dev tools
-      console.log('goldWinner:', goldWinner);
+      console.log('grammyWinner:', grammyWinner);
 
     </script>
   </head>

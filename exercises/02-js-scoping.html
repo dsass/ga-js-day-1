@@ -4,18 +4,18 @@
   <head>
     <title>Variable Scope</title>
     <script>
-      let musicalArtistMale = "Andrew Bird";
-      
+      let musicalArtist = "David Bowie";
+
 
       function createCollab() {
-        let song = "Left Handed Kisses";
-        let musicalArtistFemale = "Fiona Apple";
-        console.log("\"" + song + "\" by " + musicalArtistMale + " feat. " + musicalArtistFemale);
+        let movie = "Labyrinth";
+        let director = "Jim Henson";
+        console.log("\"" + movie + "\" by " + director + " feat. " + musicalArtist);
       }
       createCollab();
 
       // This won't work. Why?
-      console.log(musicalArtistFemale);
+      console.log(director);
     </script>
   </head>
   <body>
