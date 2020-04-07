@@ -4,18 +4,18 @@
   <head>
     <title>Event Handling</title>
     <script>
-      // We want elem accessible to both init() and sayHello()
+      // We want elem accessible to init() and any other functions below
       let elem;
+      //window.onload = init; //not recommended
+      window.addEventListener('load', init);
 
       function init() {
         elem = document.getElementById('interactive-div');
-        elem.onclick = sayHello;
+        elem.addEventListener('click', function() {
+          elem.style.background = getRandomColor();
+        });
       }
-      
-      function sayHello() {
-        elem.style.background = getRandomColor();
-      }
-      
+
       // A nice utility function for generating random hex values
       function getRandomColor() {
         var letters = '0123456789ABCDEF';
@@ -46,7 +46,7 @@
     </style>
   </head>
 
-  <body onload="init();">
+  <body>
     <div id="interactive-div">
       <span id="click-text">Click to change my color!</span>
     </div>
